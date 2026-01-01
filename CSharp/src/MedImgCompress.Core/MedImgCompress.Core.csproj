@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>MedImgCompress</RootNamespace>
+    <AssemblyName>MedImgCompress.Core</AssemblyName>
+    <Version>0.1.0</Version>
+    <Authors>Medical Imaging Team</Authors>
+    <Description>Medical image compression library supporting DICOM, JPEG 2000, and JPEG-LS</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fo-dicom" Version="5.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

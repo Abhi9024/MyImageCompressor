@@ -1,0 +1,17 @@
+# Build artifacts
+RUST/target/
+CSharp/bin/
+CSharp/obj/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.suo
+*.user
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Claude local files
+.claude/
