@@ -54,7 +54,7 @@ pub enum Commands {
         mode: ModeArg,
 
         /// Quality preset (for lossy compression)
-        #[arg(short = 'q', long, value_enum, default_value = "diagnostic")]
+        #[arg(short = 'Q', long, value_enum, default_value = "diagnostic")]
         quality: QualityArg,
 
         /// Target compression ratio (for lossy mode)
