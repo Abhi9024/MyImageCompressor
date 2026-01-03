@@ -44,19 +44,25 @@
 #![warn(missing_docs)]
 #![warn(clippy::all)]
 
+pub mod batch;
 pub mod cli;
 pub mod codec;
 pub mod config;
 pub mod dicom;
 pub mod error;
+pub mod metrics;
 pub mod pipeline;
+pub mod progress;
 
 // Re-export commonly used types
+pub use batch::{BatchJob, BatchProcessor, BatchScheduler, FileDiscovery, JobResult, JobStatus};
 pub use codec::{Codec, CodecFactory, CodecInfo, Jpeg2000Codec, JpegLsCodec};
 pub use config::{CompressionCodec, CompressionConfig, CompressionMode, Modality, QualityPreset};
 pub use dicom::{DicomFile, DicomMetadata};
 pub use error::{MedImgError, Result};
-pub use pipeline::{CompressionPipeline, CompressionResult, PipelineBuilder};
+pub use metrics::{ImageComparator, PsnrResult, QualityReport, SsimConfig, SsimResult};
+pub use pipeline::{BatchStats, CompressionPipeline, CompressionResult, PipelineBuilder};
+pub use progress::{CallbackProgress, ChannelProgress, NullProgress, ProgressEvent, ProgressHandler, ProgressPhase};
 
 /// Image data structure for compression.
 #[derive(Debug, Clone)]
